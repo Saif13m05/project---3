@@ -115,10 +115,18 @@ a{
 .card:hover .card-line{
     width: 160px;
 }
-.img{
+@media (min-width: 768px ){
+    .img-l{
+        clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+    }
+    .img-r{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 100%);
+    }
+}
+.img-l , .img-r{
     transition: 0.5s;
 }
-.card:hover .img{
+.card:hover .img-l ,.card:hover .img-r{
     transform: scale(1.007);
 }
 .join{
